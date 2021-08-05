@@ -12,6 +12,9 @@ app.get("/all", (req, res) => {
   for (let i = 0; i < countries.length; i++) {
     countriesNames.push(countries[i].name);
   }
-  res.send(countriesNames.join(", "));
+  res.send(countriesNames);
 });
 // console.log(countries[0].name);
+app.get("/", (req, res) => {
+  res.send(countries);
+});
