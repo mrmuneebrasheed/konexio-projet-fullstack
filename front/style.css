@@ -2,6 +2,7 @@
   display: block;
   width: 40%;
   margin: auto;
+  align-items: center;
 }
 .data {
   display: block;
@@ -15,8 +16,15 @@
 }
 .country-list li {
   border: 1px solid black;
+  margin: 5px;
 }
-
-ul {
-  align-items: center;
+.input {
+  margin: auto;
+}
+input {
+  width: 100%;
+  margin: 5px;
+}
+button {
+  margin: 5px 40%;
 }
