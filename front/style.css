@@ -1,9 +1,22 @@
 .container {
-  display: flex;
-  flex-basis: 30%;
-  justify-content: center;
+  display: block;
+  width: 40%;
+  margin: auto;
 }
-/* .data {
-  display: flex;
-  flex-basis:
-} */
+.data {
+  display: block;
+  align-items: center;
+}
+.heading {
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+}
+.country-list li {
+  border: 1px solid black;
+}
+
+ul {
+  align-items: center;
+}
