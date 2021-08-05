@@ -1,10 +1,6 @@
-function getAllCountries(){
-    ${".btnShowData"}.click(function(){
-        $.ajax({
-            url:"http://localhost:8000/",
-            success: function(data, status, response){
-console.log(data);
-            }
-        })
-    })
+function getAllCountries() {
+  fetch("http://localhost:7000")
+    .then((res) => res.json())
+    .then((res) => console.log(res));
 }
+getAllCountries();
