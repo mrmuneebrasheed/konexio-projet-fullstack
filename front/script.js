@@ -66,3 +66,4 @@ showAll.addEventListener("click", function () {
       }
     });
 });
+ 
