@@ -25,7 +25,7 @@ app.get("/:name", cors(), (req, res) => {
     if (
       countries[i].name.toLowerCase() === input.toLowerCase() ||
       countries[i].capital.toLowerCase() === input.toLowerCase() ||
-      countries[i].continent.toLowerCase() === input.toLowerCase()
+      countries[i].region.toLowerCase() === input.toLowerCase()
     )
       country = countries[i];
   }
