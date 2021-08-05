@@ -40,7 +40,7 @@ showDataButton.addEventListener("click", function () {
   fetch(`http://localhost:7000/${name}`)
     .then((res) => res.json())
     .then((country, error) => {
-      html = ` <li>Country Name: ${country.name}, Capital: ${country.capital}, Continent: ${country.region}; , Continent: ${country.region}, Population: ${country.population} </li>`;
+      html = ` <li>Country Name: ${country.name}, Capital: ${country.capital}, Continent: ${country.region}, Population: ${country.population} </li>`;
       countryContainer.insertAdjacentHTML("beforeend", html);
     })
     .catch((err) => {
@@ -66,4 +66,3 @@ showAll.addEventListener("click", function () {
       }
     });
 });
- 
