@@ -18,6 +18,19 @@ app.get("/all", cors(), (req, res) => {
   }
   res.send(countriesNames);
 });
+app.get("/:name", cors(), (req, res) => {
+  const input = req.params.name;
+  let country;
+  for (let i = 0; i < countries.length; i++) {
+    if (
+      countries[i].name.toLowerCase() === input.toLowerCase() ||
+      countries[i].capital.toLowerCase() === input.toLowerCase() ||
+      countries[i].continent.toLowerCase() === input.toLowerCase()
+    )
+      country = countries[i];
+  }
+  res.send(country);
+});
 // console.log(countries[0].name);
 app.get("/", cors(), (req, res) => {
   res.send(countries);
