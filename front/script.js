@@ -40,8 +40,9 @@ showDataButton.addEventListener("click", function () {
   fetch(`http://localhost:7000/${name}`)
     .then((res) => res.json())
     .then((country, error) => {
-      html = ` <li>Country Name: ${country.name}, Capital: ${country.capital}, Continent: ${country.region}, Population: ${country.population} </li>`;
+      html = ` <li>Country Name: ${country.name}, Capital: ${country.capital}, Language: ${country.languages[0].name}, Continent: ${country.region}, Population: ${country.population} </li>`;
       countryContainer.insertAdjacentHTML("beforeend", html);
+      input.value = "";
     })
     .catch((err) => {
       html = ` <li>Country do not exist </li>`;
@@ -60,7 +61,7 @@ showAll.addEventListener("click", function () {
       countriesData = res;
       countryContainer.innerHTML = "";
       for (let i = 0; i < countriesData.length; i++) {
-        html = ` <li>Country Name: ${countriesData[i].name}, Capital: ${countriesData[i].capital}, Continent: ${countriesData[i].region}, Population: ${countriesData[i].population} </li>`;
+        html = ` <li>Country Name: ${countriesData[i].name}, Capital: ${countriesData[i].capital}, Language: ${countriesData[i].languages[0].name}, Continent: ${countriesData[i].region}, Population: ${countriesData[i].population} </li>`;
         countryContainer.insertAdjacentHTML("beforeend", html);
         found = true;
       }
